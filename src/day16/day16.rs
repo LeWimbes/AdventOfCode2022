@@ -66,15 +66,15 @@ fn main() {
     }
 
     let start = valve_index["AA"];
-    part1(&distance, &valves, start);
-    part2(&distance, &valves, start);
+    task1(&distance, &valves, start);
+    task2(&distance, &valves, start);
 }
 
-fn part1(distance: &Vec<Vec<u32>>, valves: &HashMap<usize, Valve>, start: usize) {
+fn task1(distance: &Vec<Vec<u32>>, valves: &HashMap<usize, Valve>, start: usize) {
     println!("{}", dfs(start, 0, 0, &mut HashSet::<usize>::new(), distance, valves, 30, true, start));
 }
 
-fn part2(distance: &Vec<Vec<u32>>, valves: &HashMap<usize, Valve>, start: usize) {
+fn task2(distance: &Vec<Vec<u32>>, valves: &HashMap<usize, Valve>, start: usize) {
     println!("{}", dfs(start, 0, 0, &mut HashSet::<usize>::new(), distance, valves, 26, false, start));
 }
 
